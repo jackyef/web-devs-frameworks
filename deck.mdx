@@ -1,10 +1,81 @@
 import { CodeSurferLayout } from "code-surfer";
-
 export { draculaFull as theme } from "code-surfer/themes";
+import { Image, Appear, Notes } from "@mdx-deck/components";
 
-# Hello 👋
+import SocialMediaContact from "./components/SocialMediaContact.jsx";
 
-You are using [MDX Deck](https://github.com/jxnblk/mdx-deck) and [Code Surfer](https://github.com/pomber/code-surfer)
+# Digging Deeper into Hooks :atom_symbol:
+
+<SocialMediaContact />
+
+---
+
+# So JSConf...
+
+<ul>
+  <Appear>
+    <li>
+      <a
+        href="https://codepen.io/alexpopovich/full/yoXbZd"
+        target="_blank"
+      >
+        CSS clipping, masking, etc...
+      </a>
+    </li>
+    <li>
+      <a
+        href="https://codepen.io/mandymichael/full/YYaWop"
+        target="_blank"
+      >
+        Variable Fonts...
+      </a>
+    </li>
+    <li>
+      <a
+        href="https://aijs.rocks/inspire/evolution-simulator/"
+        target="_blank"
+      >
+        Machine Learning and AI in JS...
+      </a>
+      (check https://aijs.rocks/)
+    </li>
+    <li>
+      <a href="https://squoosh.app/" target="_blank">
+        WebAssembly...
+      </a>
+    </li>
+    <li>JS UI Libraries/Frameworks...</li>
+    <li>Knowledge about JS in general...</li>
+  </Appear>
+</ul>
+
+<Notes>
+  Showcase one by one very shortly. 
+  The point is to share that these complicated stuffs are now possible in the browser! 
+  Web development isn't as simple as in the past anymore.
+
+The AI JS one is about improving Artificial Neural Network over time.
+
+</Notes>
+
+---
+
+# What this talk is going to be about
+
+<Appear>
+  <h3>Not those stuffs ❌</h3>
+  <h3>React Hooks! ✅</h3>
+</Appear>
+
+---
+
+#
+
+
+---
+
+# To understand more about 
+# the tools we use
 
 ---
 
@@ -57,6 +128,36 @@ function helloFactory() {
   return name => {
     console.log("hello " + name);
   };
+}
+
+function hello(name) {
+  console.log("hello " + name);
+}
+
+hello("world");
+```
+
+```js subtitle="Adding more code so I can show you how the zoom works"
+function helloFactoryBuilder() {
+  return () => () => name => {
+    console.log("hello " + name);
+  };
+}
+
+function helloBuilder() {
+  return name => {
+    console.log("hello " + name);
+  };
+}
+
+function helloFactory() {
+  return name => {
+    console.log("hello " + name);
+  };
+}
+
+function hello2(name) {
+  console.log("hello " + name);
 }
 
 function hello(name) {
