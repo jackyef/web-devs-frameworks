@@ -8,8 +8,8 @@ export default () => {
         style={{
           display: "inline-block",
           margin: "8px 16px",
-          width: "32vw",
-          height: "32vw",
+          width: "46vw",
+          height: "46vw",
           backgroundSize: "contain",
         }}
       />
