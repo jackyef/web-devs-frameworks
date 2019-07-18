@@ -6,86 +6,162 @@ import { Split } from '@mdx-deck/layouts'
 import SocialMediaContact from "./components/SocialMediaContact.jsx";
 import SwyxProfile from "./components/SwyxProfile";
 
-# Digging Deeper into Hooks :atom_symbol:
+# The Web, Developers, and Frameworks
 
 <SocialMediaContact />
 
 ---
 
-### I was at JSConf Asia :tada:
-<Image src={require("file-loader!./assets/js-conf-2.jpeg")} style={{ backgroundSize: 'contain', height: '72vh' }}/>
-
----
-
-# So JSConf...
-
-<ul>
-  <Appear>
-    <li>
-      <a
-        href="https://codepen.io/alexpopovich/full/yoXbZd"
-        target="_blank"
-      >
-        CSS clipping, masking, etc...
-      </a>
-    </li>
-    <li>
-      <a
-        href="https://codepen.io/mandymichael/full/YYaWop"
-        target="_blank"
-      >
-        Variable Fonts...
-      </a>
-    </li>
-    <li>
-      <a
-        href="https://aijs.rocks/inspire/evolution-simulator/"
-        target="_blank"
-      >
-        Machine Learning and AI in JS...
-      </a>
-      (check https://aijs.rocks/)
-    </li>
-    <li>
-      <a href="https://squoosh.app/" target="_blank">
-        WebAssembly...
-      </a>
-    </li>
-    <li>UI Libraries/Frameworks...</li>
-    <li>Knowledge about JS in general...</li>
-  </Appear>
-</ul>
+<Image src={require("file-loader!./assets/frameworks.png")} style={{ backgroundSize: 'contain', backgroundColor: '#444' }} />
 
 <Notes>
-  Showcase one by one very shortly. 
-  The point is to share that these complicated stuffs are now possible in the browser! 
-  Web development isn't as simple as in the past anymore.
-
-The AI JS one is about improving Artificial Neural Network over time.
-
+  Talk about the vast tools that we have in the javascript environment currently. 
 </Notes>
 
 ---
 
-# What this talk is going to be about
+<Image src={require("file-loader!./assets/angular-react-vue.jpg")} style={{ backgroundSize: 'contain', width: '85vw' }} />
+
+<Notes>
+  3 of the most commonly talked about tools might be these three. Often, we sees them as competing with each other.
+</Notes>
+
+---
+
+<Image src={require("file-loader!./assets/framework-dimensions.png")} style={{ backgroundSize: 'contain', width: '85vw' }} />
+
+<Notes>
+  This is taken from Evan You's talk in JSConf Asia 2019. Frameworks are actually making decisions and therefore, 
+  tradeoffs in multiple dimensions.
+</Notes>
+
+---
+
+<Image src={require("file-loader!./assets/covering-diff-bases.png")} style={{ backgroundSize: 'contain', width: '85vw' }} />
+
+<Notes>
+  So, in some way, we can see that these frameworks/libraries are covering different spaces, and it allows us:
+  the devs, to be able to pick one according to our needs. Together, the frameworks help us to 
+  improve the web platform as a whole.
+</Notes>
+
+---
+
+# So where do we, *web developers*, stand in this vast ecosystem?
+
+<Notes>
+  So where do we, *web developers*, stand in this vast ecosystem?
+</Notes>
+
+---
+
+<Image src={require("file-loader!./assets/we-all-have-a-role.png")} style={{ backgroundSize: 'contain', width: '85vw' }} />
+
+<Notes>
+  This is taken from Nicole Sullivan talk in this year I/O. So obviously, Google has a role in helping to improve
+  the web platform. One example is they work together with framework/libraries authors, and maybe ship a new API based on 
+  the real needs that exist. In the talk, she mentioned about how they discussed about how Chrome can help frameworks by
+  providing a better scheduler API in the browser.
+  We, web developers also have a role in this. Based on how we use frameworks,
+  our feedback to them, how we develop our own web app/sites, etc. 
+</Notes>
+
+---
+
+<Image src={require("file-loader!./assets/97-node-modules.png")} style={{ backgroundSize: 'contain', width: '85vw' }} />
+
+
+<Notes>
+  Numbers from Nicole's talk as well. 97% of bundles are npm modules. That's a huge part of our app.
+</Notes>
+
+---
+
+# Many developers don't know how 3rd party modules work internally at all
+
+<Notes>
+  I don't have numbers for this. It's just from my experience interviewing people.
+  
+  For example, when we asked about how to make a web design responsive, we were expecting media query answer, right?
+  The guy answered: "Use bootstrap". Okay, but how does bootstrap do it? The answer was: "I don't know".
+
+  The vast JS ecosystem has made it so much easier to build something. We can take modules from npm,
+  and just plug it into our app. It's a great thing!
+  But, we have grown so accustomed to it and start taking it for granted. I am not saying we need
+  to know everything, how the module works in an exact way; but we need to have some level of 
+  understanding about it, not just blindly using it.
+  
+  This phenomenon has produced a mindset like...
+</Notes>
+
+---
+
+# Frameworks are magic ✨
+# The maintainers are wizards 🎩
+
+<Notes>
+  As the result, we don't dive into their codes. Eventhough most of them are totally open to be read.
+  It's hard to make our web better, if we don't know what's going on in our web!
+  At times, it almost feel useless to dive into their code. We might think: "Can I understand it?"
+</Notes>
+
+---
+
+<Image src={require("file-loader!./assets/dan-dont-know.png")} style={{ backgroundSize: 'contain', width: '85vw' }} />
+
+<Notes>
+  Framework maintainers are just people too, like you and me! I really like this tweet and post by
+  Dan Abramov, admitting about what he didn't know. Eventhough people might expect that he already
+  knows a lot of these stuffs, like terminal commands, TCP stack, etc.
+</Notes>
+
+---
+
+# What is this talk about?
 
 <Appear>
-  <h3>Not those stuffs ❌</h3>
-  <h3>React Hooks! ✅</h3>
+  <h3>To help reducing the mysterious aura of frameworks ✨</h3>
 </Appear>
 
 ---
 
-# Why am I giving this talk?
+# What do you get out of this?
+
 <Appear>
-  <h3>💰 Because Tokopedia paid for my expenses 💰</h3>
-  <h1>🤭</h1>
+  <h3>Become more comfortable in the vast JS ecosystem 🛋</h3>
+  <h3>No longer view framework maintainers as wizards 🎩</h3>
 </Appear>
+
+<Notes>
+  And hopefully, with these, you can contribute more to the web platform.
+  Either by creating your own libraries/frameworks, or just make better decisions when building your own app.
+</Notes>
+
 
 ---
 
-# To understand more about 
-# the tools we use
+# One effective way to make something not mysterious is to just dive into it
+
+<Notes>
+  Tells story about my journey with wasm. I finally decided to dive into it and apparently, it wasn't so bad.
+</Notes>
+
+---
+
+# We will be trying to find out how hooks in React works ⚛️ ️
+
+<Notes>
+  So for example, we will try to understand how hooks in react work, by trying to implement it on our own.
+</Notes>
+
+---
+
+<Image src={require("file-loader!./assets/vue-hooks.png")} style={{ backgroundSize: 'contain', width: '85vw' }} />
+
+<Notes>
+  I chose hooks because I personally think the design of hooks is interesting. Even Evan You, the creator of VueJS
+  is currently experimenting with hooks in Vue.
+</Notes>
 
 ---
 
@@ -195,24 +271,6 @@ const Hello = () => {
 
 ---
 
-<Image src={require("file-loader!./assets/tweet-markdalgleish-hooks.jpg")} style={{ backgroundSize: 'contain' }}/>
-
----
-
-### Let's have a refresh on closure! ❄️
-
----
-
-> (Closure) makes it possible for a function to have "private" variables. 
-> 
-> -- W3Schools.com
-
----
-
-### Let's try doing an implementation of hook by ourselves for learning 🤔
-
----
-
 <CodeSurferLayout>
 
 ```js
@@ -230,27 +288,58 @@ const Hello = () => {
 
 # :no_entry_sign: :atom_symbol: This is __**NOT**__ React :no_entry_sign: :atom_symbol:
 
----
-
-## Try implementing hooks on your own! :leftwards_arrow_with_hook:
-
 <Notes>
-  Mentions about how this will improve your understanding about react and hopefully make 
-  you more curious about how all other tools in JS works internally (webpack, other frameworks, etc)
+  A lot of edge cases aren't covered. But it is a useful mental model for us to understand what this library is doing.
 </Notes>
 
 ---
 
-## Be curious and explore more! :fire:
+## Magic, ~~begone~~ reduced ✨
 
 <Notes>
-  By being curious and constantly exploring and improving our understanding, we can improve ourselves, and
-  by improving personally, we can improve our team as well. I know, realistically not everyone have the same curiousity level,
-  but let's not focus on others. Focus on yourself. If each one of us do our own part, we will end up 
-  doing all of these and grow as a team. We can make Tokopedia Web Platform team, truly become one of the 
-  world class web platform team!
+  Hopefully, that live coding helped you see that frameworks aren't magic. They are only mysterious
+  because we haven't dived into them yet.
+</Notes>
 
+---
+
+## Why do we use frameworks?
+
+<Notes>
+  You see, a simple hook implementation can be done in under 1 hour. So why do we use react? 
+  More generally, why do we use frameworks? We might say it is to help us build web app.
+</Notes>
+
+---
+
+## What do they do? 
+## How do they do it?
+
+<Notes>
+  If you haven't done it yet, to start dig into these questions! It will help you become
+  a better web developer. And with more better web developer around, the web platform would
+  improve as well as the effect. We will have better community, better toolings, better frameworks.
+  All for the betterment of the web platform that we know and love.
+</Notes>
+
+---
+
+## Stop seeing frameworks as magic! ✨
+
+<Notes>
   If you didn't get anything from this talk so far, this is the one thing you at least should take away from it today!
+
+  By stop viewing frameworks as magic, and digging into them, we can improve ourselves.
+  By improving ourselves, we can improve the web platform as well. 
+</Notes>
+
+---
+
+## Be part of what makes the web awesome! 😎
+
+<Notes>
+  Closing words, be part of what makes the web awesome! 
+  Either by your awesome web app, our your awesome frameworks, we all have a role!
 </Notes>
 
 ---
