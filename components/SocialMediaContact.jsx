@@ -1,20 +1,21 @@
 import { Image } from '@mdx-deck/components'
 
-export default () => (
+export default ({ scale }) => (
   <div
     style={{
       display: "flex",
       flexDirection: "row",
       justifyContent: "center",
       alignItems: "center",
-      fontSize: "2rem",
+      fontSize: "4rem",
+      transform: `scale(${scale})`,
     }}
   >
     <Image
       src={require("file-loader!../assets/Medium.svg")}
       style={{
         display: "inline-block",
-        margin: "8px 16px",
+        margin: "8px 32px",
         width: "6vw",
         height: "6vw",
         backgroundSize: "contain",
@@ -25,7 +26,7 @@ export default () => (
       src={require("file-loader!../assets/Twitter.svg")}
       style={{
         display: "inline-block",
-        margin: "8px 16px",
+        margin: "8px 32px",
         width: "6vw",
         height: "6vw",
         backgroundSize: "contain",

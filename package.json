@@ -21,6 +21,7 @@
   },
   "name": "my-deck",
   "dependencies": {
-    "file-loader": "^4.0.0"
+    "file-loader": "^4.0.0",
+    "website-pdf": "^3.0.0"
   }
 }
